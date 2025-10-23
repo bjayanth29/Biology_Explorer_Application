@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biology Explorer - Discover the Living World</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo" id="logoBtn">🧬 Biology Explorer</div>
+      <div class="nav-center">
+        <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a data-target="home">Home</a></li>
+          <li><a data-target="topics">Topics</a></li>
+          <li><a data-target="quiz">Quiz</a></li>
+          <li><a data-target="about">About</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section id="home" class="page active">
+      <section class="hero">
+        <h1>Explore the Wonders of Life</h1>
+        <p>Journey through cells, ecosystems, and the incredible diversity of living organisms</p>
+        <button class="cta-button" data-action="goto" data-target="topics">Start Learning →</button>
+      </section>
+    </section>
+
+    <!-- TOPICS -->
+    <section id="topics" class="page">
+      <div class="container">
+        <h2 class="section-title">Biology Topics</h2>
+        <div class="cards">
+          <div class="card"><div class="card-icon">🔬</div><h3>Cell Biology</h3><p>Discover prokaryotes to eukaryotes, organelles, and cellular processes.</p></div>
+          <div class="card"><div class="card-icon">🧬</div><h3>Genetics</h3><p>Unravel DNA, inheritance and gene expression.</p></div>
+          <div class="card"><div class="card-icon">🌿</div><h3>Ecology</h3><p>Relationships between organisms and their environment.</p></div>
+          <div class="card"><div class="card-icon">🦴</div><h3>Anatomy</h3><p>Structure of organisms, tissues, organs and systems.</p></div>
+          <div class="card"><div class="card-icon">🌱</div><h3>Evolution</h3><p>Natural selection, adaptation and speciation.</p></div>
+          <div class="card"><div class="card-icon">🦠</div><h3>Microbiology</h3><p>Bacteria, viruses, fungi and their roles.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="page quiz-page">
+      <div class="quiz-hero">
+        <h1>🎯 Biology Knowledge Quiz</h1>
+        <p>Test your understanding of biology concepts</p>
+      </div>
+
+      <div class="quiz-container" id="quizContent">
+        <div class="quiz-header">
+          <div class="quiz-progress">
+            <span>📝 Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span></span>
+            <span class="score">🏆 Score: <span id="score">0</span></span>
+          </div>
+
+          <div class="progress-bar-wrap" aria-hidden="true">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div id="questionContainer">
+          <div class="quiz-question" id="question"></div>
+          <div class="quiz-options" id="options"></div>
+          <button class="next-button" id="nextButton">Next Question →</button>
+        </div>
+
+        <div class="quiz-result" id="resultContainer" style="display:none;">
+          <div class="result-score" id="finalScore"></div>
+          <div class="result-message" id="resultMessage"></div>
+          <div class="button-group">
+            <button class="restart-button" id="tryAgain">🔄 Try Again</button>
+            <button class="restart-button" id="goHome" style="background:#764ba2">🏠 Go Home</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="container">
+        <h2 class="section-title">Why Study Biology?</h2>
+        <p class="about-content">
+          Biology is the science of life itself. By studying biology, we understand how our bodies work, 
+          how ecosystems function, and how all living things are interconnected.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-box"><div class="feature-icon">🔍</div><h3>Interactive Learning</h3><p>Engage with quizzes and visual content.</p></div>
+          <div class="feature-box"><div class="feature-icon">📚</div><h3>Comprehensive Topics</h3><p>Cover all major areas of biological science.</p></div>
+          <div class="feature-box"><div class="feature-icon">🎓</div><h3>Educational Excellence</h3><p>Learn from well-researched information.</p></div>
+          <div class="feature-box"><div class="feature-icon">🌍</div><h3>Real-World Applications</h3><p>Discover how biology impacts careers and daily life.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biology Explorer. Inspiring curiosity about the living world.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
